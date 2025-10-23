@@ -1,4 +1,4 @@
-= ocp4_workload_operate_models_rhoai - workload role
+= bootstrap - workload role
 
 == Role overview
 
@@ -18,13 +18,13 @@ The provisioning infrastructure will set a variable `ACTION` to be either `provi
 
 Since Ansible lacks robust variable scoping you *must* use long-name scope parameters for your workload to avoid variable clashing.
 
-For example, parameters named `ocp4_workload_operate_models_rhoai_*` would be recognized as unique to this workload.
+For example, parameters named `operate_models_rhoai_bootstrap_*` would be recognized as unique to this workload.
 
 * This file link:./defaults/main.yml[./defaults/main.yml] contains all the variables you need to define to control the deployment of your workload.
 * The variable *ocp_username* is mandatory to assign the workload to the correct OpenShift user when deploying to a shared cluster. For most workloads the default of `system:admin` is the correct value unless this is a workload to be applied to a shared cluster.
 * You can modify any of these default values by adding `-e "variable_name=variable_value"` to the command line
 * Your deployer will override any of these variables based on configuration in AgnosticV
-* Add long-name scoped workload parameters. Example: `ocp4_workload_operate_models_rhoai_machineconfigpool_name: worker`
+* Add long-name scoped workload parameters. Example: `operate_models_rhoai_bootstrap_machineconfigpool_name: worker`
 
 == The internal variable file
 
@@ -34,8 +34,8 @@ Variables should be named just like external variables with the exception that t
 
 Examples:
 
-* `ocp4_workload_operate_models_rhoai_variable_1`
-* `ocp4_workload_operate_models_rhoai_variable_2`
+* `operate_models_rhoai_bootstrap_variable_1`
+* `operate_models_rhoai_bootstrap_variable_2`
 
 == Predefined Variables
 
