@@ -20,3 +20,6 @@ operate_models_rhoai_tenant_variable_1: "value 1"
 
 # Documentation for variable 2 (what does it do? what are valid options?)
 operate_models_rhoai_tenant_variable_2: "value 2"
+
+# Number of users to create resources for in this enviornment.
+operate_models_rhoai_tenant_user_count: 2
