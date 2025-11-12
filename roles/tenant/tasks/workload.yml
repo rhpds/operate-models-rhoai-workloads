@@ -5,6 +5,6 @@
 
 - name: Execute tenant workload tasks for each user
   ansible.builtin.include_tasks: workload_tenant.yml
-  loop: "{{ range(1, operate_models_rhoai_tenant_user_count + 1) | list }}"
+  loop: "{{ range(1, (operate_models_rhoai_tenant_user_count | int) + 1) | list }}"
   loop_control:
     loop_var: tenant_user_index
